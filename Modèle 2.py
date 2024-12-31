@@ -48,7 +48,7 @@ rf_model.fit(X_train, y_train)
 feature_importance = pd.Series(rf_model.feature_importances_, index=X.columns).sort_values(ascending=False)
 
 # Visualisation de l'importance des caractéristiques
-plt.figure(figsize=(8, 6))
+plt.figure(figsize=(12, 6))
 sns.barplot(x=feature_importance, y=feature_importance.index, palette="viridis")
 plt.title("Importance des caractéristiques dans le modèle Forêt aléatoire")
 plt.xlabel("Score d'importance")
